@@ -23,7 +23,7 @@
 \RequirePackage{setspace}
 \RequirePackage{array}
 \RequirePackage{fancyhdr}
-\RequirePackage{hyperref}
+\RequirePackage[linktocpage]{hyperref}
 \hypersetup{pdfborder=0 0 0} %,pdfview=FitH}
 
 \pagestyle{fancy}
@@ -123,6 +123,19 @@
   {\centering{\textsf{Committee Member}} \par \centering{\textsf{\textbf{#1}}}}}
   \setbox\@committeeMembers\vbox{\unvbox\@committeeMembers
   \vskip\baselineskip \def\baselinestretch{1}\@normalsize }}
+
+\newcommand\makecopyrightpage{
+\newpage
+\pagestyle{empty}
+\begin{center}
+\vspace*{20.0\baselineskip}
+Copyright \copyright \the\year{} \@author \\
+All rights reserved.
+\end{center}
+}
+
+
+
 
 
 \newcommand\makeapprovalsheet{\newpage
