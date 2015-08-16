@@ -23,7 +23,8 @@
 \RequirePackage{setspace}
 \RequirePackage{array}
 \RequirePackage{fancyhdr}
-\RequirePackage[linktocpage]{hyperref}
+%\RequirePackage[linktocpage]{hyperref}
+\RequirePackage{hyperref}
 \hypersetup{pdfborder=0 0 0} %,pdfview=FitH}
 
 \pagestyle{fancy}
@@ -126,7 +127,7 @@
 
 \newcommand\makecopyrightpage{
 \newpage
-\pagestyle{empty}
+\thispagestyle{empty}
 \begin{center}
 \vspace*{20.0\baselineskip}
 Copyright \copyright \the\year{} \@author \\
