@@ -61,28 +61,28 @@
   \null\vfil
   \vskip 60\p@
   \begin{center}%
-    {\Large\bfseries \textsf{\MakeUppercase{\@title}} \par}%
+    {\Large{\MakeUppercase{\@title}} \par}%  {\Large\bfseries \textsf{\MakeUppercase{\@title}} \par}%
     \vskip 3em%
     {\large
      \lineskip 3em%
-      {\bfseries\textsf{by}} \\
+      {{by}} \\  %{\bfseries\textsf{by}} 
       \begin{tabular}[t]{c}%
-        {\bfseries \textsf{\MakeUppercase{\@author}}}
+        {\bfseries{\MakeUppercase{\@author}}}   %\bfseries \textsf
       \end{tabular}\par%
       \vskip 2em%
-      \textsf{Submitted in partial fulfillment of the requirements} \\
+      {Submitted in partial fulfillment of the requirements} \\ %\textsf
 \if@proposal
-  \textsf{for the dissertation proposal} \\
+  {for the dissertation proposal} \\ %\textsf
   \else
-  \textsf{for the degree of \@degree} \\
+  {for the degree of \@degree} \\ %\textsf
 \fi
       \vskip 2em%
       %Dissertation Advisor: \@advisor \\
       %\vskip 2em%
-      \textsf{Department of \@department} \\
-      \textsf{CASE WESTERN RESERVE UNIVERSITY} \\
+      {Department of \@department} \\ %\textsf
+      {CASE WESTERN RESERVE UNIVERSITY} \\ %\textsf
       \vskip 2em%
-      \textsf{\@date} \par}
+      {\@date} \par} %\textsf
   \end{center}\par
   \@thanks
   \vfil\null
@@ -113,14 +113,14 @@
 \def\advisor#1{\setbox\@committeeMembers\vbox
   {\unvbox\@committeeMembers \vskip 10pt% plus 1fil minus 1fil
   \centering \def\baselinestretch{1}
-  {\centering{\textsf{Committee Chair}} \par \centering{\textsf{\textbf{#1}}}}}
+  {\centering{{Committee Chair}} \par \centering{\bfseries{{#1}}}}}  %{\centering{\textsf{Committee Chair}} \par \centering{\textsf{\textbf{#1}}}}}
   \setbox\@committeeMembers\vbox{\unvbox\@committeeMembers
   \vskip\baselineskip \def\baselinestretch{1}\@normalsize }}
 
 \def\committee#1{\setbox\@committeeMembers\vbox
   {\unvbox\@committeeMembers \vskip 10pt% plus 1fil minus 1fil
   \centering \def\baselinestretch{1}
-  {\centering{\textsf{Committee Member}} \par \centering{\textsf{\textbf{#1}}}}}
+  {\centering{{Committee Member}} \par \centering{\bfseries{{#1}}}}} %{\centering{\textsf{Committee Member}} \par \centering{\textsf{\textbf{#1}}}}}
   \setbox\@committeeMembers\vbox{\unvbox\@committeeMembers
   \vskip\baselineskip \def\baselinestretch{1}\@normalsize }}
 
@@ -142,13 +142,12 @@ All rights reserved.
 \thispagestyle{empty}
 \begin{spacing}{2.0}
 \begin{center}
-{\large\bfseries
-\textsf{CASE WESTERN RESERVE UNIVERSITY \\
+{\large\bfseries{CASE WESTERN RESERVE UNIVERSITY \\ %\textsf
 SCHOOL OF GRADUATE STUDIES}
 }
 \par
 \vspace{1em}
-{\textsf{
+{{ %\textsf
 \if@proposal
   We hereby approve the proposal of \\
   \else
@@ -156,9 +155,9 @@ SCHOOL OF GRADUATE STUDIES}
 \fi
 }
 \par
-\textsf{\Large \@author}}
+{\Large \@author}} %\textsf
 \par
-\textsf{candidate for the degree of \textbf{\@degree{}}*.}
+{candidate for the degree of \textbf{\@degree{}}*.}  %\textsf
 \vspace{2em}
 
 \unvcopy\@committeeMembers
@@ -166,7 +165,7 @@ SCHOOL OF GRADUATE STUDIES}
 \vfill
 %\vskip 2em%
 %\noindent
-{\centering{\textsf{Date of Defense}} \par \centering{\textsf{\textbf{\@defensedate}}}}
+{\centering{{Date of Defense}} \par \centering{{\textbf{\@defensedate}}}} %{\centering{\textsf{Date of Defense}} \par \centering{\textsf{\textbf{\@defensedate}}}}
 \vfill
 \noindent \small{*We also certify that written approval has been obtained \\
 for any proprietary material contained therein.}
@@ -176,7 +175,7 @@ for any proprietary material contained therein.}
 }
 
 \newenvironment{acknowledgments}%
-{\cleardoublepage\chapter*{Acknowledgments}\addcontentsline{toc}{chapter}{Acknowledgments}\markboth{ACKNOWLEDGMENTS}{}}%
+{\chapter*{Acknowledgments}\addcontentsline{toc}{chapter}{Acknowledgments}\markboth{ACKNOWLEDGMENTS}{}}%
 {\null}
 
 
@@ -213,7 +212,11 @@ for any proprietary material contained therein.}
 {\vfill\@gobble\null}
 
 
-
+\newenvironment{dedication}
+{\newpage\thispagestyle{empty}
+ \begin{center}
+  \vspace*{20.0\baselineskip}}
+{ \end{center}}
 
 
 
