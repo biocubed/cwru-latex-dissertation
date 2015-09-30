@@ -23,6 +23,7 @@
 \RequirePackage{setspace}
 \RequirePackage{array}
 \RequirePackage{fancyhdr}
+\RequirePackage{notoccite}
 \RequirePackage[linktocpage]{hyperref}
 \hypersetup{pdfborder=0 0 0} %,pdfview=FitH}
 
