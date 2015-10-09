@@ -130,7 +130,7 @@
 \thispagestyle{empty}
 \begin{center}
 \vspace*{20.0\baselineskip}
-Copyright \copyright \the\year{} \@author \\
+Copyright \copyright\,\the\year{} \@author \\
 All rights reserved.
 \end{center}
 }
